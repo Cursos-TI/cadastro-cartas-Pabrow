@@ -5,14 +5,11 @@ int main(){
     char estado_carta1[2], estado_carta2[2]; //vai entrar uma letra de A a H.
     char codigo_carta1[4], codigo_carta2[4]; //a letra do estado seguida de um numero de 01 até 04.
     char nome_cidade_carta1[50], nome_cidade_carta2[50]; //o nome da cidade 
-    int populacao_carta1=0, populacao_carta2=0, pturisticos_carta1 = 0, pturisticos_carta2 = 0;  // população de cada cidade e qtd de pontos turisticos.
+    unsigned long int populacao_carta1=0, populacao_carta2=0; //população de cada cidade.
+    int pturisticos_carta1 = 0, pturisticos_carta2 = 0;  // população de cada cidade e qtd de pontos turisticos.
     float area_carta1 = 0, area_carta2 = 0, pib_carta1 = 0, pib_carta2 = 0; //tamanho em km2 e pib.
-    //Nível Intermediário:
-    /*Calcular a Densidade Populacional: Divida a população da cidade pela sua área. O resultado será a densidade populacional, que representa o número de habitantes por quilômetro quadrado. Armazene esse valor em uma variável do tipo float.
-    Calcular o PIB per Capita: Divida o PIB da cidade pela sua população. O resultado será o PIB per capita, que indica a riqueza média por pessoa na cidade. Armazene esse valor em uma variável do tipo float.
-    Exibir os Resultados: Além de exibir as informações lidas do usuário (como no nível básico), seu programa também deve exibir a densidade populacional e o PIB per capita calculados para cada cidade. Formate os valores de ponto flutuante com duas casas decimais.*/
     float densidade_populacional_carta1 = 0, densidade_populacional_carta2 = 0, pib_per_capita_carta1 = 0, pib_per_capita_carta2 = 0;
-
+    float super_poder_carta1 = 0, super_poder_carta2 = 0; //super poder de cada carta.
 
 
     printf("Prossiga com as informações da Carta 1!!!!!\n");
@@ -79,5 +76,29 @@ int main(){
     printf("DADOS CARTA 1:\nESTADO: %s\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nNumero de Pontos Túristicos: %d\nDensidade Populacional: %.2f\nPIB per Capita: %.2f", estado_carta1,codigo_carta1,nome_cidade_carta1,populacao_carta1,area_carta1,pib_carta1,pturisticos_carta1,densidade_populacional_carta1,pib_per_capita_carta1);
     printf("\n\n");
     printf("\nDADOS CARTA 2:\nESTADO: %s\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nNumero de Pontos Túristicos: %d\nDensidade Populacional: %.2f\nPIB per Capita: %.2f", estado_carta2,codigo_carta2,nome_cidade_carta2,populacao_carta2,area_carta2,pib_carta2,pturisticos_carta2,densidade_populacional_carta2,pib_per_capita_carta2);
+
+    printf("\n\n");
+
+    super_poder_carta1 = (populacao_carta1 + area_carta1 + pib_carta1 +pturisticos_carta1 + pib_per_capita_carta1)/densidade_populacional_carta1; //inverso da densidade_populacional_carta1
+    super_poder_carta2 = (populacao_carta2 + area_carta2 + pib_carta2 +pturisticos_carta2 + pib_per_capita_carta2)/densidade_populacional_carta2; //inverso da densidade_populacional_carta2
+
+    printf("Estamos processando suas informações e calculando os super poderes...\n");
+    printf("...\n");
+    printf("...\n");
+    printf("Aguarde um pouco...\n");
+    printf("...\n");
+
+    printf("Cartas Vencedoras do Duelo:\n");
+    printf("População: Carta 1 Venceu (%d)\n", populacao_carta1 > populacao_carta2 );
+    printf("Area: Carta 1 Venceu (%d)\n", area_carta1 > area_carta2 );
+    printf("PIB: Carta 1 Venceu (%d)\n", pib_carta1 > pib_carta2 );
+    printf("Pontos Turisticos: Carta 1 Venceu (%d)\n", pturisticos_carta1 > pturisticos_carta2 );
+    printf("Densidade Populacional: Carta 2 Venceu (%d)\n", densidade_populacional_carta2 > densidade_populacional_carta1 );
+    printf("PIB per Capita: Carta 1 Venceu (%d)\n", pib_per_capita_carta1 > pib_per_capita_carta2 );
+    printf("Super Poder: Carta 1 Venceu (%d)\n", super_poder_carta1 > super_poder_carta2 );
+
+
+
+
 
 }
