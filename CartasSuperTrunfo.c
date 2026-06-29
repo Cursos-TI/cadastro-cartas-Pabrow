@@ -64,7 +64,7 @@ int main(){
     pib_per_capita_carta1 = pib_carta1 / populacao_carta1;
     pib_per_capita_carta2 = pib_carta2 / populacao_carta2;
 
-    printf("\n\n");
+    printf("...\n");
 
     printf("Obrigado pelos dados inseridos!\n");
     printf("Estamos processando suas informações...\n");
@@ -72,12 +72,13 @@ int main(){
     printf("...\n");
     printf("Quase lá...\n");
     printf("...\n");
+    printf("...\n");
     
     printf("DADOS CARTA 1:\nESTADO: %s\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nNumero de Pontos Túristicos: %d\nDensidade Populacional: %.2f\nPIB per Capita: %.2f", estado_carta1,codigo_carta1,nome_cidade_carta1,populacao_carta1,area_carta1,pib_carta1,pturisticos_carta1,densidade_populacional_carta1,pib_per_capita_carta1);
     printf("\n\n");
     printf("\nDADOS CARTA 2:\nESTADO: %s\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nNumero de Pontos Túristicos: %d\nDensidade Populacional: %.2f\nPIB per Capita: %.2f", estado_carta2,codigo_carta2,nome_cidade_carta2,populacao_carta2,area_carta2,pib_carta2,pturisticos_carta2,densidade_populacional_carta2,pib_per_capita_carta2);
 
-    printf("\n\n");
+    printf("...\n");
 
     super_poder_carta1 = (populacao_carta1 + area_carta1 + pib_carta1 +pturisticos_carta1 + pib_per_capita_carta1)/densidade_populacional_carta1; //inverso da densidade_populacional_carta1
     super_poder_carta2 = (populacao_carta2 + area_carta2 + pib_carta2 +pturisticos_carta2 + pib_per_capita_carta2)/densidade_populacional_carta2; //inverso da densidade_populacional_carta2
@@ -87,18 +88,27 @@ int main(){
     printf("...\n");
     printf("Aguarde um pouco...\n");
     printf("...\n");
+    printf("...\n");
 
-    printf("Cartas Vencedoras do Duelo:\n");
+    /*printf("Carta Vencedora do Duelo:\n");
     printf("População: Carta 1 Venceu (%d)\n", populacao_carta1 > populacao_carta2 );
     printf("Area: Carta 1 Venceu (%d)\n", area_carta1 > area_carta2 );
     printf("PIB: Carta 1 Venceu (%d)\n", pib_carta1 > pib_carta2 );
     printf("Pontos Turisticos: Carta 1 Venceu (%d)\n", pturisticos_carta1 > pturisticos_carta2 );
     printf("Densidade Populacional: Carta 2 Venceu (%d)\n", densidade_populacional_carta2 > densidade_populacional_carta1 );
     printf("PIB per Capita: Carta 1 Venceu (%d)\n", pib_per_capita_carta1 > pib_per_capita_carta2 );
-    printf("Super Poder: Carta 1 Venceu (%d)\n", super_poder_carta1 > super_poder_carta2 );
-
-
-
-
+    printf("Super Poder: Carta 1 Venceu (%d)\n", super_poder_carta1 > super_poder_carta2 );*/
+    printf("Comparação de cartas (Atributo: PIB per Capita)\n");
+    printf("Carta 1 - %s (%s): %.2f\n", nome_cidade_carta1, estado_carta1, pib_per_capita_carta1);
+    printf("Carta 2 - %s (%s): %.2f\n", nome_cidade_carta2, estado_carta2, pib_per_capita_carta2);
+    printf("Resultado: ");
+    if(pib_per_capita_carta1 > pib_per_capita_carta2){
+        printf("Carta 1 Venceu!\n");
+    }else{
+        if(pib_per_capita_carta1 < pib_per_capita_carta2){
+            printf("Carta 2 Venceu!\n");    
+        } 
+        printf("Temos um empate!\n");    
+    }
 
 }
