@@ -107,8 +107,9 @@ int main(){
     }else{
         if(pib_per_capita_carta1 < pib_per_capita_carta2){
             printf("Carta 2 Venceu!\n");    
-        } 
-        printf("Temos um empate!\n");    
+        }else{ 
+        printf("Temos um empate!\n");   
+        }
     }
 
 }
